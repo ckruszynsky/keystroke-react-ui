@@ -1,5 +1,22 @@
 {
   "name": "keystroke-react-ui",
+  "description": "A collection of React components for building user interfaces built on top of TailwindCss.The components are designed to be composable and customizable, and they follow the principles of unidirectional data flow and controlled components.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ckruszynsky/keystroke-react-ui.git"
+  },
+  "keywords": [
+    "react",
+    "tailwindcss",
+    "ui",
+    "components",
+    "design",
+    "system"
+  ],
+  "author": {
+    "name": "Chad Kruszynsky",
+    "email": "ckruszynsky@gmail.com"
+  },
   "version": "0.1.0",
   "private": true,
   "main": "dist/cjs/index.js",
