@@ -97,7 +97,7 @@ export const WithCustomRenderImage: Story = {
       <img
         src="https://source.unsplash.com/random/800x600"
         alt="News"
-        className="object-fit rounded-t-lg"
+        className="rounded-t-lg object-fit"
       />
     ),
     className: "max-w-sm mx-auto",
@@ -131,12 +131,12 @@ export const WithForm: Story = {
       <>
         <Card.Header>
           <div className="flex items-center justify-center">
-            <h2 className="text-2xl text-center font-semibold">Contact Us</h2>
+            <h2 className="text-2xl font-semibold text-center">Contact Us</h2>
           </div>
         </Card.Header>
         <form className="flex flex-col gap-4">
           <div>
-            <div className="mb-2 block">
+            <div className="block mb-2">
               <label
                 htmlFor="name"
                 className="text-sm font-medium text-gray-700 dark:text-gray-300"
@@ -146,12 +146,12 @@ export const WithForm: Story = {
               <input
                 type="text"
                 id="name"
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                className="block w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm dark:border-gray-700 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
               />
             </div>
           </div>
           <div>
-            <div className="mb-2 block">
+            <div className="block mb-2">
               <label
                 htmlFor="email"
                 className="text-sm font-medium text-gray-700 dark:text-gray-300"
@@ -161,12 +161,12 @@ export const WithForm: Story = {
               <input
                 type="email"
                 id="email"
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                className="block w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm dark:border-gray-700 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
               />
             </div>
           </div>
           <div>
-            <div className="mb-2 block">
+            <div className="block mb-2">
               <label
                 htmlFor="message"
                 className="text-sm font-medium text-gray-700 dark:text-gray-300"
@@ -175,12 +175,33 @@ export const WithForm: Story = {
               </label>
               <textarea
                 id="message"
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                className="block w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm dark:border-gray-700 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
               ></textarea>
             </div>
           </div>
           <Button>Submit</Button>
         </form>
+      </>
+    ),
+    className: "max-w-sm mx-auto",
+  },
+};
+
+export const WithCustomHeader: Story = {
+  args: {
+    variant: "full",
+    children: (
+      <>
+        <Card.Header className="px-2 py-4 rounded-t-sm bg-accent">
+          <div className="flex items-center justify-between">
+            <h2 className="text-2xl font-semibold text-center">
+              Breaking News
+            </h2>
+          </div>
+        </Card.Header>
+        <Card.Content className="px-4 py-2">
+          {newsContent[randomIndex]}
+        </Card.Content>
       </>
     ),
     className: "max-w-sm mx-auto",

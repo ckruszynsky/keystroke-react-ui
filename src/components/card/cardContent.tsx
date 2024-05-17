@@ -13,11 +13,11 @@ const CardContent = React.forwardRef<HTMLDivElement, CardContentProps>(
     return (
       <div
         ref={ref}
-        className={cn("flex flex-col h-full pt-4 justify-center", className)}
+        className={cn("flex flex-col h-full pt-4", className)}
         {...props}
       >
         {typeof children === "string" ? (
-          <p className=" font-normal text-gray-700 dark:text-gray-400">
+          <p className="font-normal text-gray-500 truncate whitespace-pre-wrap dark:text-gray-400 line-clamp-3">
             {children}
           </p>
         ) : (
@@ -27,7 +27,7 @@ const CardContent = React.forwardRef<HTMLDivElement, CardContentProps>(
           {props.callToActionText && (
             <Button
               onClick={props.onCallToActionClick}
-              className="w-full inline-flex items-end justify-items-end"
+              className="inline-flex items-end w-full justify-items-end"
             >
               {props.callToActionText}
             </Button>

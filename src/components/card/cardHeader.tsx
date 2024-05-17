@@ -13,19 +13,27 @@ const CardHeader = React.forwardRef<HTMLDivElement, CardHeadertProps>(
         ref={ref}
         className={cn(
           "flex",
-          horizontal ? "flex-row" : "flex-col justify-center ",
+          horizontal
+            ? "flex-row items-center justify-center"
+            : "flex-col items-center justify-center",
           className
         )}
         {...props}
       >
-        <h5 className="text-2xl text-center font-semibold tracking-tight text-gray-900 dark:text-white">
+        <h5 className="text-2xl font-semibold tracking-tight text-center text-gray-900 dark:text-white line-clamp-1">
           {children}
         </h5>
       </div>
     ) : (
       <div
         ref={ref}
-        className={cn("flex", horizontal ? "flex-row" : "flex-col", className)}
+        className={cn(
+          "flex",
+          horizontal
+            ? "flex-row justify-center items-center w-full h-full"
+            : "flex-col items-center justify-center w-full h-full",
+          className
+        )}
         {...props}
       >
         {children}

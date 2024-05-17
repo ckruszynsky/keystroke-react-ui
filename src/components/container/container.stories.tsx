@@ -2,6 +2,7 @@ import React from "react"; // Import the React module
 import type { Meta, StoryObj } from "@storybook/react";
 import { Container } from "./container";
 import { Card } from "../card";
+import exp from "constants";
 
 const meta = {
   component: Container,
@@ -87,5 +88,13 @@ export const Padded: Story = {
     children: childrenContent(),
     className: "bg-gray-100 dark:bg-gray-800",
     variant: "padded",
+  },
+} satisfies Story;
+
+export const Centered: Story = {
+  args: {
+    children: childrenContent(),
+    className: "bg-gray-100 dark:bg-gray-800",
+    variant: "centered",
   },
 } satisfies Story;

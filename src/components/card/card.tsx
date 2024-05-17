@@ -9,8 +9,9 @@ export const cardVariants = cva(
   {
     variants: {
       variant: {
-        default: "flex flex-col",
+        default: "flex flex-col w-full",
         horizontal: "flex flex-col md:flex-row",
+        full: "w-full",
       },
     },
     defaultVariants: {
@@ -54,14 +55,21 @@ export const Card = ({
           className={
             variant === "horizontal"
               ? "h-28 w-full rounded-t-lg object-cover sm:h-48 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-              : "object-cover h-52 w-full  rounded-t-lg"
+              : "object-cover h-32  md:h-52 md:w-full rounded-t-lg"
           }
         />
       )}
-      <div className={cn("px-6 py-8 md:px-4 md:py-5 ")}>{children}</div>
+      <div
+        className={cn(
+          variant === "full" ? "px-0 py-0" : "px-2 py-2 md:px-4 md:py-5"
+        )}
+      >
+        {children}
+      </div>
     </div>
   );
 };
 
+Card.displayName = "Card";
 Card.Header = CardHeader;
 Card.Content = CardContent;

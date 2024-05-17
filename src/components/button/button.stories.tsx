@@ -66,10 +66,10 @@ export const Large: Story = {
   },
 };
 
-export const Icon: Story = {
+export const Medium: Story = {
   args: {
     children: "Read More",
-    size: "icon",
+    size: "md",
     variant: "ghost",
     icon: (
       <ArrowLeftIcon
@@ -80,6 +80,13 @@ export const Icon: Story = {
   },
 };
 
+export const Disabled: Story = {
+  args: {
+    children: "Button",
+    variant: "default",
+    disabled: true,
+  },
+};
 export const Loading: Story = {
   args: {
     children: "Button",

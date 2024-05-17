@@ -6,9 +6,10 @@ import { cn } from "../../utils/cn";
 const containerVariants = cva("mx-auto ", {
   variants: {
     variant: {
-      default: "max-w-7xl px-6 py-2 lg:px-8 lg:py-6",
-      full: "container-full py-2 px-2",
-      padded: "container-full p-2 md:p-4 lg:p-6",
+      default: "container-full md:px-6 md:py-2 lg:px-8 lg:py-6",
+      full: "container-full md:py-2 md:px-2",
+      padded: "container-full md:p-4 lg:p-6",
+      centered: "mx-auto max-w-7xl md:px-6 md:py-2 lg:px-8 lg:py-6",
     },
   },
   defaultVariants: {
